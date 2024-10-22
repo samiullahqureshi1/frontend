@@ -1,0 +1,18 @@
+.circle {
+    width: 150px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden; /* Ensures that the image doesn't overflow the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc; /* Optional: border around the circles */
+    margin: 10px; /* Optional: space between circles */
+  }
+  
+  .circle img {
+    width: 100%; /* Makes the image fill the circle */
+    height: 100%; /* Makes the image fill the circle */
+   
+  }
+  

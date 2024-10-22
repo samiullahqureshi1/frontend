@@ -1,0 +1,20 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #e5e7eb; /* Gray color */
+  padding: 8px; /* Padding around the navbar */
+  border-bottom: 2px solid #d1d5db; /* Solid gray border */
+}
+
+.navbar a {
+  padding: 8px 16px; /* Padding for the links */
+  font-size: 14px; /* Font size for the links */
+  color: #374151; /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+  color: #1f2937; /* Darker color on hover */
+}

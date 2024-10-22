@@ -1,0 +1,39 @@
+.bigimage {
+    position: relative; /* Required for absolute positioning of the overlay */
+    overflow: hidden; /* Hide overflow */
+    height: 100vh; /* Adjust height as needed */
+  }
+  
+  .bigimage::before {
+    content: ''; /* Empty content for background image */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../img/model.jpg'); /* Adjust image path */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    
+  }
+  
+  .overlay {
+    position: absolute; /* Position overlay */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+  }
+  
+  .text-muted {
+    color: rgba(255, 255, 255, 0.8); /* Slightly muted text color */
+  }
+  
+  a {
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make link bold */
+    margin-top: 10px; /* Space above link */
+    display: inline-block; /* Allow margin to apply */
+  }
+  

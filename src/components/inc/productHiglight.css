@@ -1,0 +1,42 @@
+.container {
+    max-width: 1200px; /* Set maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add padding on the sides */
+  }
+  
+  .row {
+    display: flex; /* Use Flexbox for row */
+    flex-wrap: wrap; /* Allow wrapping of columns */
+  }
+  
+  .big-image,
+  .big-image-col,
+  .big-image-coll {
+    position: relative; /* Position for overlay */
+    margin-bottom: 20px; /* Space below images */
+    margin-right: 15px; /* Space between columns on the right */
+  }
+  
+  .big-image:last-child,
+  .big-image-col:last-child,
+  .big-image-coll:last-child {
+    margin-right: 0; /* Remove margin for the last column */
+  }
+  
+  .big-image-img {
+    width: 100%; /* Make images responsive */
+    height: 600px; /* Maintain aspect ratio */
+  }
+  
+  .overlay {
+    position: absolute; /* Overlay on top of images */
+    top: 79%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset for centering */
+    text-align: center; /* Center text */
+  }
+  
+  .text-white {
+    color: white; /* White text color */
+  }
+  

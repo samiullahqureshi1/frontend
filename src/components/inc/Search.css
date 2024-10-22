@@ -1,0 +1,66 @@
+/* Container to hold logo, search bar, and icons inline */
+.containers {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #f9f9f9; /* Optional background color */
+}
+
+/* Style for the logo */
+.logo {
+  margin: 16px;
+  margin-left: 150px; /* Adjust margin as needed */
+  width: 100px;
+}
+
+/* Container for the search bar */
+.search-container {
+  position: relative; /* To position the icon inside the input */
+  margin-left: 20px; /* Spacing between logo and search bar */
+}
+
+/* Style for the search input */
+.search-bar {
+  padding: 8px 12px; /* Adjust padding for a clean look */
+  padding-right: 40px; /* Extra space on the right for the icon */
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  width: 500px;
+  font-size: 14px;
+}
+
+/* Position the search icon */
+.search-icon {
+  position: absolute;
+  right: 10px; /* Position the icon on the right inside the search bar */
+  top: 50%; /* Center the icon vertically */
+  transform: translateY(-50%);
+  color: #a1a1a1;
+  pointer-events: none; /* Prevent interaction */
+}
+
+/* Container for the icons next to the search bar */
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-left: 800px; /* Spacing between search bar and icons */
+}
+
+/* Individual icon styling */
+.icon {
+  margin: 0 10px; /* Spacing between icons */
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.checkout-button {
+  padding: 8px 16px;
+  background-color: #b8d8d8;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px; /* Spacing between icons and the button */
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
