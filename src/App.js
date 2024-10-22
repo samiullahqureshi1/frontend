@@ -16,14 +16,9 @@ import Login from './components/inc/Login';
 
 function App() {
   return (
-    <Router>
-       <Routes>
-        <Route path="/login" element={<Login />} />
-        
-      </Routes>
       <div>
-        {/* <Navbar/> */}
-        {/* <SearchBar />
+        
+         <SearchBar />
         <NewNavbar />
         <Banner />
         <ChildBanner />
@@ -34,9 +29,8 @@ function App() {
         <ProductHighlights />
         <FooterBanner />
         <RecentlyViewed />
-        <Footer /> */}
+        <Footer />
       </div>
-    </Router>
   );
 }
 
