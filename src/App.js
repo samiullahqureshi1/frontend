@@ -13,24 +13,34 @@ import RecentlyViewed from './components/inc/Recently';
 import SearchBar from './components/inc/SeachBar';
 import ChildBanner from './components/inc/Text';
 import Login from './components/inc/Login';
+import SignUp from './components/inc/SignUp';
+
+const MainLayout = () => (
+  <>
+    <SearchBar />
+    <NewNavbar />
+    <Banner />
+    <ChildBanner />
+    <BigImage />
+    <ImageGallery />
+    <Ban />
+    <CircleImageGrid />
+    <ProductHighlights />
+    <FooterBanner />
+    <RecentlyViewed />
+    <Footer />
+  </>
+);
 
 function App() {
   return (
-      <div>
-        
-         <SearchBar />
-        <NewNavbar />
-        <Banner />
-        <ChildBanner />
-        <BigImage />
-        <ImageGallery />
-        <Ban />
-        <CircleImageGrid />
-        <ProductHighlights />
-        <FooterBanner />
-        <RecentlyViewed />
-        <Footer />
-      </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/" element={<MainLayout />} />
+      </Routes>
+    </Router>
   );
 }
 

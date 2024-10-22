@@ -1,0 +1,146 @@
+.login-container {
+    padding: 20px;
+  }
+  
+  .login-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+  }
+  
+
+  .icon-lock, .icon-phone {
+    color: #6b7280; /* Gray color */
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  
+  .help-section {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #6b7280; /* Gray color */
+  }
+  
+  .icon-phone {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  
+  .shadow-box {
+    display: flex;
+    gap: 70px;
+    padding: 40px;
+    background-color: #fff;
+    margin-left: 200px;
+   
+}
+
+.existing-customers {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    height: 500px;
+  }
+  .existing-customers h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+  }
+   .new-customers h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #000;
+   }
+
+  .existing-customers p {
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+  }
+
+  .new-customers p {
+    color: #333;
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+ form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+ }
+
+ label {
+    margin-bottom: 5px;
+    font-size: 14px;
+ }
+
+ .input-field {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    outline: none;
+    width: 100%;
+    height: 60px;
+  }
+
+  .password-container {
+    display: flex;
+    align-items: center;
+  }
+/* 
+  .show-password {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0 25px 25px 0;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+  } */
+
+  .forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #006666;
+    text-decoration: none;
+    margin-right: 16px
+  }
+
+  .sign-in-btn {
+    padding: 10px;
+    background-color: #008080;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 60px;
+  }
+  .sign-in-btn:hover {
+    background-color: #006666;
+  }
+    
+
+  .register-btn {
+    padding: 10px 40px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 220%;
+    height: 60px;
+  }
+  
+  .register-btn:hover {
+    background-color: #333;
+  }
