@@ -14,8 +14,9 @@
     background-color: white;
     color: rgb(3, 29, 45);
     height: 40px; /* Set specific height for the button */
-    line-height: 40px; /* Center text vertically */
+    /* line-height: 40px; Center text vertically */
     padding: 0 20px; /* Add horizontal padding for spacing */
     display: inline-flex; /* Ensure the button behaves like inline element */
     align-items: center; /* Vertically center the text */
+    font-size: 10px;
 }

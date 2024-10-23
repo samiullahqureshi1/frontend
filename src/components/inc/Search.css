@@ -64,6 +64,27 @@
   color: #333;
   margin-top: 6px;
 }
+/* .dropdown-dialog {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.checkout {
+  background: #c7e5e5;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  color:#006666;
+} */
+
+/* .checkout:disabled {
+  background: #f1f1f1;
+  cursor: not-allowed;
+} */
 
 /* Hide search bar on mobile */
 @media screen and (max-width: 768px) {

@@ -1,0 +1,120 @@
+.heart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+}
+
+label {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.heart-container p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.text {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.text span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    color: #555;
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+.social-networks {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 15px;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Align account sections in a row */
+  .footer-top {
+    display: flex;
+    justify-content: space-around; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .account-section {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .account-section h4 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .account-section p {
+    margin: 0;
+    font-size: 15px;
+    color: #666;
+    
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+  }
+  
+  .footer-section h4 {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .footer-section p:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section small {
+    font-size: 11px;
+    color: #999;
+  }
+  

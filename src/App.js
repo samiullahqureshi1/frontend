@@ -14,6 +14,7 @@ import SearchBar from './components/inc/SeachBar';
 import ChildBanner from './components/inc/Text';
 import Login from './components/inc/Login';
 import SignUp from './components/inc/SignUp';
+import Heart from './components/inc/Heart';
 
 const MainLayout = () => (
   <>
@@ -55,6 +56,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/" element={<MainLayout />} />
+          <Route path="/favourite" element={<Heart/>} />
         </Routes>
       </Layout>
     </Router>

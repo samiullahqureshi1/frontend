@@ -4,7 +4,7 @@ import dress from "../../img/dress.jpg";
 import dress2 from "../../img/cosyy.jpg";
 import dress3 from "../../img/school.jpg";
 
-const ProductHighlights = () => {
+const     ProductHighlights = () => {
   return (
     <div className="container mt-4">
       <div className="row">

@@ -28,7 +28,7 @@ const SearchBar = () => {
       </div>
       <div className="icon-container">
         <a href='login'><FaUser className="icon" /></a>
-        <a><FaHeart className="icon" /></a>
+        <a href='/favourite'><FaHeart className="icon" /></a>
         <a><FaShoppingBag className="icon" onClick={toggleDropdown} /></a>
         <button className="checkout-button">Checkout</button>
         {isDropdownOpen && (
