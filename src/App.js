@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Ban from './components/inc/Ban';
 import Banner from './components/inc/Banner';
 import BigImage from './components/inc/BigImage';
@@ -17,8 +17,6 @@ import SignUp from './components/inc/SignUp';
 
 const MainLayout = () => (
   <>
-    <SearchBar />
-    <NewNavbar />
     <Banner />
     <ChildBanner />
     <BigImage />
@@ -32,14 +30,33 @@ const MainLayout = () => (
   </>
 );
 
+const Layout = ({ children }) => {
+  const location = useLocation();
+  const showNavbarAndSearch = location.pathname !== '/login' && location.pathname !== '/signup';
+  
+  return (
+    <>
+      {showNavbarAndSearch && (
+        <>
+          <SearchBar />
+          <NewNavbar />
+        </>
+      )}
+      {children}
+    </>
+  );
+};
+
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/" element={<MainLayout />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<MainLayout />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }

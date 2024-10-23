@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
-import { FaUser, FaHeart, FaShoppingBag, FaSearch } from 'react-icons/fa'; // Importing icons from react-icons
-import './Search.css'; // Import the CSS file
-import logo from '../../img/mark.jpg'; // Adjust the path to your logo image
+import { FaUser, FaHeart, FaShoppingBag, FaSearch } from 'react-icons/fa';
+import './Search.css';
+import logo from '../../img/mark.jpg';
 
 const SearchBar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isSearchOpen, setSearchOpen] = useState(false); // State for mobile search bar
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
+  const toggleSearchBar = () => {
+    setSearchOpen(!isSearchOpen);
+  };
+
   return (
     <div className="containers">
-      <a href='/'><img src={logo} alt="Logo" className="logo" /></a> {/* Logo */}
-      <div className="search-container">
+      <a href='/'><img src={logo} alt="Logo" className="logo" /></a>
+      <div className={`search-container ${isSearchOpen ? 'active' : ''}`}>
         <input
           type="text"
           placeholder="Search"
           className="search-bar"
         />
-        <FaSearch className="search-icon" /> {/* React Search icon */}
+        <FaSearch className="search-icon" onClick={toggleSearchBar} /> {/* React Search icon */}
       </div>
       <div className="icon-container">
-        {/* Use React icons for user, wishlist, and cart */}
         <a href='login'><FaUser className="icon" /></a>
-        <FaHeart className="icon" />
-        <FaShoppingBag className="icon" onClick={toggleDropdown} />
-
-        {/* Checkout Button */}
+        <a><FaHeart className="icon" /></a>
+        <a><FaShoppingBag className="icon" onClick={toggleDropdown} /></a>
         <button className="checkout-button">Checkout</button>
-
-        {/* Dropdown Dialog for Shopping Bag */}
         {isDropdownOpen && (
           <div className="dropdown-dialog">
             <div className="bag-header">

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Category.css'; // Import the CSS file for styling
+import './Category.css'; // Ensure to import updated CSS file
 
 const NewNavbar = () => {
   return (

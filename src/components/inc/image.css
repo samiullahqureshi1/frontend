@@ -1,18 +1,35 @@
+.container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of circles */
+  justify-content: center; /* Center the circles */
+}
+
 .circle {
-    width: 150px; /* Set the desired width */
-    height: 150px; /* Set the desired height */
-    border-radius: 50%; /* Makes the div circular */
-    overflow: hidden; /* Ensures that the image doesn't overflow the circle */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #ccc; /* Optional: border around the circles */
-    margin: 10px; /* Optional: space between circles */
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  border-radius: 50%; /* Makes the div circular */
+  overflow: hidden; /* Ensures that the image doesn't overflow the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ccc; /* Optional: border around the circles */
+  margin: 10px; /* Optional: space between circles */
+}
+
+.circle img {
+  width: 100%; /* Makes the image fill the circle */
+  height: 100%; /* Makes the image fill the circle */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+  .circle {
+    flex: 0 0 calc(100% - 20px); /* 2 circles in a row with margin */
   }
-  
-  .circle img {
-    width: 100%; /* Makes the image fill the circle */
-    height: 100%; /* Makes the image fill the circle */
-   
+}
+
+@media (max-width: 480px) { /* For smaller screens */
+  .circle {
+    flex: 0 0 calc(100% - 20px); /* 2 circles in a row */
   }
-  
+}

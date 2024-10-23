@@ -1,39 +1,96 @@
 .bigimage {
-    position: relative; /* Required for absolute positioning of the overlay */
-    overflow: hidden; /* Hide overflow */
-    height: 100vh; /* Adjust height as needed */
+  position: relative; /* Required for absolute positioning of the overlay */
+  overflow: hidden; /* Hide overflow */
+  height: 100vh; /* Full screen height */
+}
+
+.bigimage::before {
+  content: ''; /* Empty content for background image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../img/model.jpg'); /* Adjust image path */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Ensure no repetition */
+  z-index: -1; /* Place the background behind the content */
+}
+
+.overlay {
+  position: absolute; /* Position overlay */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centering trick */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+  padding: 20px; /* Padding for better appearance on smaller devices */
+}
+
+.text-muted {
+  color: rgba(255, 255, 255, 0.8); /* Slightly muted text color */
+}
+
+/* Make link bold and remove underline */
+a {
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 992px) {
+  .bigimage {
+    height: 80vh; /* Reduce height on tablets */
   }
   
-  .bigimage::before {
-    content: ''; /* Empty content for background image */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../../img/model.jpg'); /* Adjust image path */
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the image */
-    
+  .overlay h2 {
+    font-size: 28px; /* Smaller heading on tablets */
   }
-  
+
+  .overlay h6 {
+    font-size: 14px; /* Adjust subtitle size */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bigimage {
+    height: 70vh; /* Reduce height further on smaller tablets and large phones */
+  }
+
+  .overlay h2 {
+    font-size: 24px; /* Smaller heading on small tablets/large phones */
+  }
+
+  .overlay h6 {
+    font-size: 13px; /* Smaller subtitle */
+  }
+
+  .overlay a {
+    font-size: 16px; /* Adjust link font size */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .bigimage {
+    height: 60vh; /* Smaller height for mobile devices */
+  }
+
+  .overlay h2 {
+    font-size: 20px; /* Smaller heading on mobile */
+  }
+
+  .overlay h6 {
+    font-size: 12px; /* Smaller subtitle */
+  }
+
+  .overlay a {
+    font-size: 14px; /* Adjust link font size */
+  }
+
   .overlay {
-    position: absolute; /* Position overlay */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Centering trick */
-    color: white; /* Text color */
-    text-align: center; /* Center text */
+    padding: 10px; /* More compact padding on mobile */
   }
-  
-  .text-muted {
-    color: rgba(255, 255, 255, 0.8); /* Slightly muted text color */
-  }
-  
-  a {
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make link bold */
-    margin-top: 10px; /* Space above link */
-    display: inline-block; /* Allow margin to apply */
-  }
-  
+}

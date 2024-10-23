@@ -1,34 +1,56 @@
 .new-navbar {
-    background-color: #000; /* Background color of the navbar */
-    padding: 0px 0;
-    display: flex;
-    justify-content: center; /* Center the navbar items */
-  }
-  
+  background-color: #000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* Default navigation item styles */
+.nav-items {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  overflow-x: auto; /* Enable horizontal scrolling for mobile */
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar on IE */
+}
+
+.nav-items::-webkit-scrollbar {
+  display: none; /* Hide scrollbar on Webkit browsers */
+}
+
+.nav-item {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 10px;
+}
+
+.nav-item:hover {
+  color: #d1d1d1;
+}
+
+/* Highlight and clearance special colors */
+.highlight {
+  color: #d4a017;
+}
+
+.clearance {
+  color: #ff4500;
+}
+
+/* Responsive media query */
+@media screen and (max-width: 768px) {
   .nav-items {
-    list-style: none;
-    display: flex;
-    gap: 40px; /* Space between the items */
+    gap: 20px;
+    padding: 0 10px;
+    overflow-x: auto; /* Allow horizontal scroll on mobile */
   }
-  
+
   .nav-item {
-    color: #fff; /* Default white color */
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-    padding-top: 10px;
+    font-size: 18px; /* Smaller font for mobile */
   }
-  
-  .nav-item:hover {
-    color: #d1d1d1; /* Lighter color on hover */
-  }
-  
-  .highlight {
-    color: #d4a017; /* Highlight color for 'Christmas' */
-  }
-  
-  .clearance {
-    color: #ff4500; /* Orange/red color for 'Clearance' */
-  }
-  
+}

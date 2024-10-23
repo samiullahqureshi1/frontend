@@ -3,26 +3,26 @@
   display: flex;
   align-items: center;
   padding: 8px 16px;
-  background-color: #f9f9f9; /* Optional background color */
+  background-color: #f9f9f9;
+  justify-content: space-between; /* Ensures proper spacing */
 }
 
 /* Style for the logo */
 .logo {
   margin: 16px;
-  margin-left: 150px; /* Adjust margin as needed */
   width: 100px;
 }
 
 /* Container for the search bar */
 .search-container {
-  position: relative; /* To position the icon inside the input */
-  margin-left: 20px; /* Spacing between logo and search bar */
+  position: relative;
+  margin-right: auto;
 }
 
 /* Style for the search input */
 .search-bar {
-  padding: 8px 12px; /* Adjust padding for a clean look */
-  padding-right: 40px; /* Extra space on the right for the icon */
+  padding: 8px 12px;
+  padding-right: 40px;
   border: 1px solid #d1d5db;
   border-radius: 20px;
   width: 500px;
@@ -32,27 +32,26 @@
 /* Position the search icon */
 .search-icon {
   position: absolute;
-  right: 10px; /* Position the icon on the right inside the search bar */
-  top: 50%; /* Center the icon vertically */
+  right: 10px;
+  top: 50%;
   transform: translateY(-50%);
   color: #a1a1a1;
-  pointer-events: none; /* Prevent interaction */
+  pointer-events: none;
 }
 
 /* Container for the icons next to the search bar */
 .icon-container {
   display: flex;
   align-items: center;
-  margin-left: 800px; /* Spacing between search bar and icons */
 }
 
 /* Individual icon styling */
 .icon {
-  margin: 0 10px; /* Spacing between icons */
+  margin: 0 10px;
   font-size: 20px;
   color: #333;
   cursor: pointer;
-  margin-bottom: 6px;
+  position: relative;
 }
 
 .checkout-button {
@@ -60,87 +59,19 @@
   background-color: #b8d8d8;
   border: none;
   border-radius: 20px;
-  margin-left: 10px; /* Spacing between icons and the button */
   cursor: pointer;
   font-size: 14px;
   color: #333;
-}
-.icon-container {
-  position: relative;
-  display: flex;
-  align-items: center;
+  margin-top: 6px;
 }
 
-.icon {
-  font-size: 20px;
-  margin: 0 10px;
-  cursor: pointer;
-  position: relative;
-}
+/* Hide search bar on mobile */
+@media screen and (max-width: 768px) {
+  .search-container {
+    display: none;
+  }
 
-.dropdown-dialog {
-  position: absolute;
-  top: 70px;
-  right: 0;
-  width: 400px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  z-index: 100;
-  color: #000;
+  .checkout-button {
+    padding: 6px 12px;
+  }
 }
-
-.bag-header {
-  padding: 10px 0;
-  border-bottom: 2px solid #eaeaea;
-  text-align: center;
-  font-weight: bold;
-}
-
-.bag-content {
-  text-align: center;
-  padding: 15px 0;
-  color: #888;
-}
-
-.bag-footer {
-  padding-top: 10px;
-}
-
-.total {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #eaeaea;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  width: 50%;
-}
-
-.view-bag {
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 20px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
-.checkout {
-  background: #c7e5e5;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 10px;
-  cursor: pointer;
-  color:#006666;
-}
-
-/* .checkout:disabled {
-  background: #f1f1f1;
-  cursor: not-allowed;
-} */

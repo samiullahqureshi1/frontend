@@ -1,5 +1,5 @@
 import React from 'react';
-import './image.css'
+import './image.css';
 // Import images
 import aniiImg from '../../img/anii.jpg';
 import kewImg from '../../img/kew.jpg';
@@ -15,7 +15,7 @@ const CircleImageGrid = () => {
       altText: 'Trending animal print',
     },
     {
-      imgSrc: aniiImg,
+      imgSrc: kewImg,
       altText: 'The Kew collection',
     },
     {
@@ -34,14 +34,13 @@ const CircleImageGrid = () => {
       imgSrc: girlImg,
       altText: 'Girls Sequence Edit',
     },
-    
   ];
 
   return (
     <div className="container mt-3">
       <div className="row">
         {items.map((item, index) => (
-          <div className="col-lg-2 col-md-4 col-sm-6 d-flex justify-content-center" key={index}>
+          <div className="col-4 col-sm-4 col-md-4 d-flex justify-content-center" key={index}>
             <div className="circle">
               <img src={item.imgSrc} alt={item.altText} />
             </div>
@@ -53,3 +52,4 @@ const CircleImageGrid = () => {
 };
 
 export default CircleImageGrid;
+  
